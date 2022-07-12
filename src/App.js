@@ -37,16 +37,17 @@ function App() {
 
   return (
     <>
-      <h1>Heading</h1>
-      <span style={{ wordWrap: "break-word" }}>
-        Loren ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-      </span>
-      <br />
-      <span>
-        architecto neque illum eius error, totam mollitia reiciendis officies
-        quis magnam?
-      </span>
-
+      <div className="text-center">
+        <h1>Heading</h1>
+        <span style={{ wordWrap: "break-word" }}>
+          Loren ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        </span>
+        <br />
+        <span>
+          architecto neque illum eius error, totam mollitia reiciendis officies
+          quis magnam?
+        </span>
+      </div>
       {data?.map((item, index) => {
         return (
           <React.Fragment key={item.id}>
