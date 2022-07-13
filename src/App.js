@@ -53,7 +53,6 @@ function App() {
           <React.Fragment key={item.id}>
             <Helmet>
               <meta charSet="utf-8" />
-              <title>{item.title}</title>
               <meta name="description" content={item.description} />
               <meta name="price" content={item.price} />
             </Helmet>
