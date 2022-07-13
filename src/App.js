@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import { FetchApiData } from "./api";
 import ItemDetails from "./components/ItemDetails";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Loading from "./components/Loading";
 function App() {
   const [data, setData] = useState(null);
   const [show, setShow] = useState(false);
@@ -35,6 +36,7 @@ function App() {
     };
   }, [show]);
 
+  if (!data) return <Loading />;
   return (
     <>
       <div className="text-center">
